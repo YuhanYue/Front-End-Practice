@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<!-- 猜数字 -->
+
+<head>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+  <mate http-equiv = "X-UA-Compatible" content = "ie-edge">
+  <title>Document</title>
+  <script>
+  function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+}
+    var num = getRandomInt(0,100);
+    var guessNum = prompt('Please enter your numeber:');
+    console.log(num);
+
+    while(guessNum != num){
+      if(guessNum < num) alert('数字偏小');
+      else alert('数字偏大');
+
+      var guessNum = prompt('Please enter your numeber:');
+
+    }
+
+    alert('恭喜你，猜对了')
+
+  </script>
+</head>
+
+<body>
+
+</body>      
+
+</html>
